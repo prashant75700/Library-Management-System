@@ -43,7 +43,7 @@ public class Library {
             Book book = bookCollection.get(isbn);
             if (book.isCheckedOut) {
                 book.isCheckedOut = false; // Reset the status
-                System.out.println(">>> Error: This book was never checked Out!");
+                System.out.println(" This book successufuly returned to Library!");
             }
             else {
             System.out.println(">>> Error: This book is not checked out!");

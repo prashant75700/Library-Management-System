@@ -28,7 +28,13 @@ public class Main {
                     String isbn = sc.nextLine();
                     System.out.print("Enter Title: ");
                     String title = sc.nextLine();
-                    myLibrary.addBook(isbn, title);
+                    //Safety Check: so fields can't be empty filled with junk data
+                    if (isbn.trim().isEmpty() || title.trim().isEmpty()) {
+                        System.out.println(">>> Error: ISBN and Title cannot be empty!");
+                    } 
+                    else {
+                        myLibrary.addBook(isbn, title);
+                        }
                     break;
 
                 case "2": {
